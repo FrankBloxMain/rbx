@@ -1,0 +1,19 @@
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
+
+local w1 = library:Window("Adopt Me RB Battles") -- Text
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Credits: FrankBlox Scripts",
+    Text = "discord.io/FrankBlox",
+    Duration = 500,
+    })
+
+    w1:Button(
+        "RB Battles (Get Badge)",
+        function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/Amity/main/RBBattlesAdoptMe.lua"))()
+        end
+    ) -- Text, Callback
+
+
+w1:Label("YT: FrankBlox Scripts") -- Text
