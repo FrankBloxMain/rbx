@@ -1,0 +1,27 @@
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
+
+local w1 = library:Window("Hungry Pig Script") -- Text
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Credits: FrankBlox Scripts",
+    Text = "discord.io/FrankBlox",
+    Duration = 500,
+    })
+
+    w1:Button(
+        "Infinite Points",
+        function()
+            local args = {
+                [1] = {
+                    ["ImageID"] = "rbxassetid://11746951753",
+                    ["Name"] = "SpeedCoil",
+                    ["Cost"] = -100000
+                }
+            }
+            
+            game:GetService("ReplicatedStorage").PurchasePet:FireServer(unpack(args))
+        end
+    ) -- Text, Callback
+
+
+w1:Label("YT: FrankBlox Scripts") -- Text
