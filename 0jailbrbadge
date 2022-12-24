@@ -1,0 +1,19 @@
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
+
+local w1 = library:Window("Jailbreak RB Battles") -- Text
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Credits: FrankBlox Scripts",
+    Text = "discord.io/FrankBlox",
+    Duration = 500,
+    })
+
+    w1:Button(
+        "Finish Obby",
+        function()
+            game:GetService("ReplicatedStorage"):WaitForChild("RBBattlesTeleportRemote"):FireServer(workspace:WaitForChild("RBSkyscraper"):WaitForChild("Teleporters"):WaitForChild("Top"):WaitForChild("TPP"))
+        end
+    ) -- Text, Callback
+
+
+w1:Label("YT: FrankBlox Scripts") -- Text
