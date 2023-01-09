@@ -9,21 +9,22 @@ game.StarterGui:SetCore("SendNotification", {
     Duration = 500,
     })
 
-    window:Toggle("Auto Blocks", "Auto Blocks", false, function(x)
-        _G.AutoFarm = x
-        while _G.AutoFarm do
-            wait()
-            game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
-        end
-    end)
-    
-    window:Toggle("Auto Rebirth", "Auto Rebirth", false, function(x)
-        _G.AutoRebirth = x
-        while _G.AutoRebirth do
-            wait()
-            game:GetService("ReplicatedStorage").Remotes.Rebirth:InvokeServer("RebirthShop")
-        end
-    end)
+    window:Toggle("Auto Build", "Auto Build", false, function(x)
+    _G.AutoFarm = x
+    while _G.AutoFarm do
+        wait()
+        game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
+    end
+end)
+
+window:Toggle("Auto Rebirth", "Auto Rebirth", false, function(x)
+    _G.AutoRebirth = x
+    while _G.AutoRebirth do
+        wait()
+        game:GetService("ReplicatedStorage").Remotes.Rebirth:InvokeServer("RebirthShop")
+    end
+end)
+
 
 
 w1:Label("YT: FrankBlox Scripts") -- Text
