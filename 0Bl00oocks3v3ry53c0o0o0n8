@@ -1,22 +1,29 @@
--- deobfuscated and normalised by sunken
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
-local window  = library:Window("+1 Blocks Every Second")
+local w1 = library:Window("+1 Blocks Every Second") -- Text
 
-window:Toggle("Auto Build", "Auto Build", false, function(x)
-    _G.AutoFarm = x
-    while _G.AutoFarm do
-        wait()
-        game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
-    end
-end)
+setclipboard("https://discord.io/FrankBlox")
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Credits: FrankBlox Scripts",
+    Text = "Discord Link Has Copied",
+    Duration = 500,
+    })
 
-window:Toggle("Auto Rebirth", "Auto Rebirth", false, function(x)
-    _G.AutoRebirth = x
-    while _G.AutoRebirth do
-        wait()
-        game:GetService("ReplicatedStorage").Remotes.Rebirth:InvokeServer("RebirthShop")
-    end
-end)
+    window:Toggle("Auto Blocks", "Auto Blocks", false, function(x)
+        _G.AutoFarm = x
+        while _G.AutoFarm do
+            wait()
+            game:GetService("ReplicatedStorage").Remotes.PlaceBlock:FireServer()
+        end
+    end)
+    
+    window:Toggle("Auto Rebirth", "Auto Rebirth", false, function(x)
+        _G.AutoRebirth = x
+        while _G.AutoRebirth do
+            wait()
+            game:GetService("ReplicatedStorage").Remotes.Rebirth:InvokeServer("RebirthShop")
+        end
+    end)
 
-window:Label("YT: Tora IsMe")
+
+w1:Label("YT: FrankBlox Scripts") -- Text
