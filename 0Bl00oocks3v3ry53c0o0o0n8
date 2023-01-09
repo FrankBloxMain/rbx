@@ -10,7 +10,11 @@ game.StarterGui:SetCore("SendNotification", {
     })
 
 
-    window:Toggle("Auto Build", "Auto Build", false, function(x)
+    w1:Toggle(
+        "Auto Build", 
+        "Auto Build", 
+        false, 
+        function(x)
         _G.AutoFarm = x
         while _G.AutoFarm do
             wait()
@@ -18,7 +22,11 @@ game.StarterGui:SetCore("SendNotification", {
         end
     end)
     
-    window:Toggle("Auto Rebirth", "Auto Rebirth", false, function(x)
+    w1:Toggle(
+        "Auto Rebirth", 
+        "Auto Rebirth", 
+        false, 
+        function(x)
         _G.AutoRebirth = x
         while _G.AutoRebirth do
             wait()
