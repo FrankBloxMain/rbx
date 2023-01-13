@@ -1,0 +1,97 @@
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
+
+local w1 = library:Window("Sword Slasher Script") -- Text
+
+setclipboard("https://discord.io/FrankBlox")
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Credits: FrankBlox Scripts",
+    Text = "Discord Link Has Copied",
+    Duration = 500,
+    })
+
+
+    w1:Toggle(
+        "Auto Attack", 
+        "Auto Attack", 
+        false, 
+        function(x)
+        _G.AutoAttack = x
+        while _G.AutoAttack do
+            wait()
+            game:GetService("ReplicatedStorage").EventStorage.Attack:InvokeServer()
+        end
+    end)
+
+    w1:Label("Auto Stats") -- Text
+
+    w1:Toggle(
+        "Defence",
+        "Defence",
+        false,
+        function(x)
+            _G.AutoDefence = x
+            while _G.AutoDefence do
+                wait()
+                game:GetService("ReplicatedStorage").EventStorage.Upgrade:InvokeServer("Defence","")
+            end
+        end
+    
+    )
+
+    w1:Toggle(
+        "Strength",
+        "Strength",
+        false,
+        function(x)
+            _G.AutoStrength = x
+            while _G.AutoStrength do
+                wait()
+                game:GetService("ReplicatedStorage").EventStorage.Upgrade:InvokeServer("Strength","")
+            end
+        end
+    
+    )
+
+    w1:Toggle(
+        "Agility",
+        "Agility",
+        false,
+        function(x)
+            _G.AutoAgility = x
+            while _G.AutoAgility do
+                wait()
+                game:GetService("ReplicatedStorage").EventStorage.Upgrade:InvokeServer("Agility","")
+            end
+        end
+    
+    )
+    
+    w1:Toggle(
+        "Regen",
+        "Regen",
+        false,
+        function(x)
+            _G.AutoRegen = x
+            while _G.AutoRegen do
+                wait()
+                game:GetService("ReplicatedStorage").EventStorage.Upgrade:InvokeServer("Regen","")
+            end
+        end
+    
+    )
+
+    w1:Toggle(
+        "Luck",
+        "Luck",
+        false,
+        function(x)
+            _G.AutoLuck = x
+            while _G.AutoLuck do
+                wait()
+                game:GetService("ReplicatedStorage").EventStorage.Upgrade:InvokeServer("Luck","")
+            end
+        end
+    
+    )
+
+w1:Label("YT: FrankBlox Scripts") -- Text
